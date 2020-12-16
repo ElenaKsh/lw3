@@ -13,34 +13,30 @@
     <div class="header__logo">
       <img src="img/logo.png" alt="">
     </div>
-    <div class="header__menu">
-      <a href="#" class="header__menu-item">About</a>
-      <a href="#" class="header__menu-item">Features</a>
-      <a href="#" class="header__menu-item">Pricing</a>
-      <a href="#" class="header__menu-item">Testimonials</a>
-      <a href="#" class="header__menu-item">Help</a>
+    <div class="header-menu">
+      <a href="#" class="header-menu__item">About</a>
+      <a href="#" class="header-menu__item">Features</a>
+      <a href="#" class="header-menu__item">Pricing</a>
+      <a href="#" class="header-menu__item">Testimonials</a>
+      <a href="#" class="header-menu__item">Help</a>
     </div>
-    <div class="header__authorization">
-      <div class="header__authorization-sign-in">
-        <a href="#" class="autorization">Sign in</a>
-      </div>
-      <div class="header__authorization-sign-up">
-        <a href="#" class="autorization">Sign up</a>
-      </div> 
+    <div class="header-authorization">
+        <a href="#" class="header-authorization__sign-in">Sign in</a>
+        <a href="#" class="header-authorization__sign-up header-authorization__sign-up--active">Sign up</a>
     </div>
   </header>
 
 
   <div class="intro">
-    <div class="intro__block">
+    <div class="intro-block">
       <div class="intro__title">
-        <p>Want anything to be easy with LaslesVPN.</p>
+        Want anything to be easy with LaslesVPN.
       </div>
       <div class="intro__subtitle">
-        <p>Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.</p>
+        Provide a network for all your needs with ease and fun using LaslesVPN discover interesting features from us.
       </div>
-      <div class="intro__start">
-        <button class="intro__start-button">Get started</button>
+      <div class="intro-start">
+        <button class="intro-start__button">Get started</button>
       </div>
     </div>
     <div class="intro__image">
@@ -49,51 +45,57 @@
   </div>
 
 
-  <!-- <div class="counter">
-    <div class="counter__users">
-      <div class="counter__users-icon">
+<div class="counter">
+    <div class="counter-item">
+      <div class="counter-item__icon">
         <img src="img/user.png" alt="">
       </div>
-      <div class="counter__users-score">
-        <p>90+</p>
-      </div>
-      <div class="counter__users-name">
-        <p>users</p>
+      <div class="counter-item-text">
+        <div class="counter-item-text__score">
+          90+
+        </div>
+        <div class="counter-item-text__name">
+          users
+        </div>
       </div>
     </div>
-    <div class="counter__locations">
-      <div class="counter__locations-icon">
+    <div class="counter-item">
+      <div class="counter-item__icon">
         <img src="img/location.png" alt="">
       </div>
-      <div class="counter__locations-score">
-        <p>30+</p>
-      </div>
-      <div class="counter__locations-name">
-        <p>locations</p>
+      <div class="counter-item-text">
+        <div class="counter-item-text__score">
+          30+
+        </div>
+        <div class="counter-item-text__name">
+          locations
+        </div>
       </div>
     </div>
-    <div class="counter__servers">
-      <div class="counter__servers-icon">
+    <div class="counter-item">
+      <div class="counter-item__icon">
         <img src="img/server.png" alt="">
       </div>
-      <div class="counter__servers-score">
-        <p>50+</p>
+      <div class="counter-item-text">
+        <div class="counter-item-text__score">
+          50+
+        </div>
+        <div class="counter-item-text__name">
+          servers
+        </div>
       </div>
-      <div class="counter__servers-name">
-        <p>servers</p>
-      </div>
-    </div>
-  </div> -->
+    </div>  
+  </div> 
 
 
-  <!-- <div class="compilation">
-    <div class="compilation__title"><p>Choose Your Plan</p></div>
-    <div class="compilation__subtitle"><p>Let's choose the package that is best for you and explore it happily and cheerfully.</p></div>
-    <div class="plan">
-      <div class="plan__free">
-        <div class="plan__free-icon"><img src="img/free.png" alt=""></div>
-        <div class="plan__free-name"><p>Free Plan</p></div>
-        <div class="plan__free-list">
+  <div class="compilation">
+    <div class="compilation__title">Choose Your Plan</div>
+    <div class="compilation__subtitle">Let's choose the package that is best for you and explore it happily and cheerfully.</div>
+    <div class="compilation-plan">
+      <div class="compilation-plan-item">
+        <div class="compilation-plan-item__icon"><img src="img/free.png" alt=""></div>
+        <div class="compilation-plan-item__name">Free Plan</div>
+        <div class="compilation-plan-item__list">
           <ul>
             <li>Unlimited Bandwitch</li>
             <li>Encrypted Connection</li>
@@ -101,13 +103,13 @@
             <li>Works on All Devices</li>
           </ul>
         </div>
-        <div class="plan__free-price"><p>free</p></div>
-        <button class="plan__free-select">select</button>
+        <div class="compilation-plan__price">Free</div>
+        <button class="compilation-plan__select">Select</button>
       </div>
-      <div class="plan__standard">
-        <div class="plan__standard-icon"><img src="img/standard.png" alt=""></div>
-        <div class="plan__standard-name"><p>Standard Plan</p></div>
-        <div class="plan__standard-list">
+      <div class="compilation-plan-item">
+        <div class="compilation-plan-item__icon"><img src="img/standard.png" alt=""></div>
+        <div class="compilation-plan-item__name">Standard Plan</div>
+        <div class="compilation-plan-item__list">
           <ul>
             <li>Unlimited Bandwitch</li>
             <li>Encrypted Connection</li>
@@ -116,13 +118,13 @@
             <li>Connect Anyware</li>
           </ul>
         </div>
-        <div class="plan__standard-price"><p>$9 / mo</p></div>
-        <button class="plan__standard-select">select</button>
+        <div class="compilation-plan__price">$9 / mo</div>
+        <button class="compilation-plan__select">Select</button>
       </div>
-      <div class="plan__premium">
-        <div class="plan__premium--icon"><img src="img/premium.png" alt=""></div>
-        <div class="plan__premium--name"><p>Free Plan</p></div>
-        <div class="plan__premium--list">
+      <div class="compilation-plan-item compilation-plan-item--active">
+        <div class="compilation-plan-item__icon"><img src="img/premium.png" alt=""></div>
+        <div class="compilation-plan-item__name">Premium Plan</div>
+        <div class="compilation-plan-item__list">
           <ul>
             <li>Unlimited Bandwitch</li>
             <li>Encrypted Connection</li>
@@ -132,8 +134,8 @@
             <li>Get New Features</li>
           </ul>
         </div>
-        <div class="plan__premium--price"><p>$12 / mo</p></div>
-        <button class="plan__premium--select">select</button>
+        <div class="compilation-plan__price">$12 / mo</div>
+        <button class="compilation-plan__select compilation-plan__select--active">Select</button>
       </div>
     </div>
   </div>
@@ -141,36 +143,37 @@
   <footer class="footer">
     <div class="footer__about-company">
       <div class="footer__logo"><img src="img/logo.png" alt=""></div>
-      <div class="footer__conclusion"><p>LaslesVPN is a private virtual network that has unique features and has high security.</p></div>
+      <div class="footer__conclusion">LaslesVPN is a private virtual network that has unique features and has high security.</div>
       <div class="footer__company-links">
         <a href=""></a><img src="img/socmed.png" alt="">
         <a href=""></a><img src="img/socmed.png" alt="">
         <a href=""></a><img src="img/socmed.png" alt="">
       </div>
+      <div class="footer__copyright">©2020LaslesVPN</div> 
     </div>
     <div class="footer__about-product">
-      <p>Product</p>
-      <a href="#">download</a>
-      <a href="#">pricing</a>
-      <a href="#">locations</a>
-      <a href="#">server</a>
-      <a href="#">countries</a>
-      <a href="#">blog</a>
+      <div class="footer-menu">Product</div>
+      <a href="#" class="footer-menu__item">Download</a>
+      <a href="#" class="footer-menu__item">Pricing</a>
+      <a href="#" class="footer-menu__item">Locations</a>
+      <a href="#" class="footer-menu__item">Server</a>
+      <a href="#" class="footer-menu__item">Countries</a>
+      <a href="#" class="footer-menu__item">Blog</a>
     </div>
     <div class="footer__about-engage">
-      <p>Engage</p>
-      <a href="#" class="footer__engage-link">laslesVPN ?</a>
-      <a href="#">FAQ</a>
-      <a href="#">tutorials</a>
-      <a href="#">About Us</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+      <div class="footer-menu">Engage</div>
+      <a href="#" class="footer-menu__item">LaslesVPN ?</a>
+      <a href="#" class="footer-menu__item">FAQ</a>
+      <a href="#" class="footer-menu__item">Tutorials</a>
+      <a href="#" class="footer-menu__item">About Us</a>
+      <a href="#" class="footer-menu__item">Privacy Policy</a>
+      <a href="#" class="footer-menu__item">Terms of Service</a>
     </div>
     <div class="footer__earn-money">
-      <p>Earn Money</p>
-      <a href="#">Affiliate</a>
-      <a href="#">Become Partner</a>
+      <div class="footer-menu">Earn Money</div>
+      <a href="#" class="footer-menu__item">Affiliate</a>
+      <a href="#" class="footer-menu__item">Become Partner</a>
     </div>
-  </footer> -->
+  </footer>
 </body>
 </html>

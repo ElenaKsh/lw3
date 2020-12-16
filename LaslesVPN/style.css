@@ -3,8 +3,13 @@
   src: url("fonts/Rubik-Light.ttf"); 
 }
 
+body {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 header {
-  position: absolute;
   width: 100%;
   height: 133px;
   top: 0;
@@ -17,57 +22,61 @@ header {
 }
 
 .header__logo {
-  position: absolute;
   left: 195px;
 }
 
-.header__menu {
+.header-menu__item {
+  left: 456px;
+  margin: 0 20px;
+  vertical-align: top;
+  text-decoration: none;
+
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
+  color: #4F5665;
 }
 
-.header__menu-item {
-  position: relative;
-  left: 456px;
-  margin: 0 20px;
-  vertical-align: top;
-  text-decoration: none;
-}
-
-.header__authorization {
-  position: relative;
-  right: 195px;
+.header-authorization {
   display: flex;
+  max-width: 1387px;
 }
 
-.header__authorization-sign-in {
-  position: relative;
+.header-authorization__sign-in {
+  text-decoration: none;
   margin-right: 75px;
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  color: #0B132A;
+  padding: 10px;
 }
 
-.header__authorization-sign-up {
-  position: relative;
+.header-authorization__sign-up {
+  text-decoration: none;
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  color: #0B132A;
+  padding: 10px;
 }
 
-.autorization {
-  text-decoration: none;
+.header-authorization__sign-up--active {
+  padding-right: 45px;
+  padding-left: 45px;
+  border: 1px solid #F53855;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: #F53855;
 }
 
 .intro {
-  position: relative;
   width: 100%;
   top: 126px;
   left: 195px;
@@ -80,6 +89,7 @@ header {
   height: 140px;
   left: 150px;
   top: 206.77px;
+
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -100,7 +110,7 @@ header {
   line-height: 30px;
 }
 
-.intro__start-button {
+.intro-start__button {
   border-color: #F53838;
   box-shadow: 0 40px 54px rgba(245, 56, 56, 0.35);
   width: 250px;
@@ -115,4 +125,278 @@ header {
   font-weight: bold;
   font-size: 16px;
   line-height: 25px;
+}
+
+.counter {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  top: 750px;
+  left: 195px;
+  margin: 0 auto;
+}
+
+.counter-item {
+  margin-top: 100px;
+  display: flex;
+  width: 339px;
+  height: 130px;
+  margin-left: 91px;
+}
+
+.counter-item__icon {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  top: 35px;
+}
+
+.counter-item-text {
+  margin-left: 36.5px;
+  margin-top: 35px;
+  width: 53px;
+  height: 65px;
+}
+.counter-item-text__score {
+  width: 49px;
+  height: 30px;
+  left: 332.5px;
+  top: 732.05px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.counter-item-text__name {
+  width: 91px;
+  height: 30px;
+  left: 720px;
+  top: 767.05px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.compilation {
+  width: 100%;
+  height: 962;
+  left: 175px;
+  top: 1000px;
+}
+
+.compilation__title {
+  width: 383.41px;
+  height: 50px;
+  margin-top: 120px;
+  margin-left: 400px;
+  
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  color: #0B132A;
+}
+
+.compilation__subtitle {
+  width: 555px;
+  height: 60px;
+  margin-left: 315px;
+  margin-bottom: 72px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #4F5665;
+}
+
+.compilation-plan {
+  width: 1090px;
+  height: 760px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.compilation-plan-item {
+  width: 330px;
+  height: 760px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+
+  background: #FFFFFF;
+  border: 2px solid #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.compilation-plan-item__icon {
+  margin: 0 auto;
+  margin-top: 79px;
+}
+
+.compilation-plan-item__name { 
+  max-width: 330px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0B132A;
+}
+
+.compilation-plan-item__list {
+  height: 230px;
+  margin: 0 auto;
+  list-style-image: url(img/check.png);
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: #4F5665;
+}
+
+.compilation-plan__price {
+  margin: 0 auto;
+  margin-top: 10px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #0B132A;
+}
+
+.compilation-plan__select {
+  width: 177.88px;
+  height: 45px;
+  margin: 0 auto;
+  margin-top: 33px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F53838;
+
+  border-color: #F53838;
+  border: 2px solid #F53838;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background-color: #FFFF;
+}
+
+.compilation-plan-item--active {
+  width: 330px;
+  height: 760px;
+  background: #FFFFFF;
+  border: 2px solid #F53838;
+  box-sizing: border-box;
+  border-radius: 10px;  
+}
+
+.compilation-plan__select--active {
+  background: #F53838;
+  color: #FFFFFF;
+}
+
+footer {
+  margin-top: 103px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  margin-bottom: 26px;
+}
+
+.footer__conclusion {
+  width: 340px;
+  height: 61.57px;
+  margin-bottom: 30px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4F5665;
+}
+
+.footer__company-links {
+  margin-bottom: 10px;
+}
+
+.footer__copyright {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #AFB5C0;
+}
+
+.footer__about-product {
+  width: 74px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__about-engage {
+  width: 123px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__earn-money {
+  width: 121px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu {
+  margin-bottom: 20px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #0B132A;
+}
+
+.footer-menu__item {
+  margin-bottom: 10px;
+  text-decoration: none;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4F5665;
 }
