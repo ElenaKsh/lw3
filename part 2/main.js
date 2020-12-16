@@ -77,16 +77,16 @@ window.onload = function() {
   }
 
   // регистрируем события
-  var addButton = document.querySelector("#add-button-store");
-  var addButton1 = document.querySelector("#add-button-listing");
-  var deleteButton = document.querySelector("#delete-button-listing");
-  var addElementButton = document.querySelector("#add-elemetn-listing-button");
+  var addButtonStore = document.querySelector("#add-button-store");
+  var addButtonListing = document.querySelector("#add-button-listing");
+  var deleteButtonListing = document.querySelector("#delete-button-listing");
+  var addElementButtonListing = document.querySelector("#add-elemetn-listing-button");
   var sortListingButton = document.querySelector("#sort-listing-button");
   var sortStoreButton = document.querySelector("#sort-store-button");
   var renameListingButton = document.querySelector("#rename-listing-button");
   var renameStoreButton = document.querySelector("#rename-store-button");
 
-  addButton.onclick = function() {
+  addButtonStore.onclick = function() {
     var selectedOption = document.querySelector(
       ".listing-select option:checked"
     );
@@ -94,20 +94,20 @@ window.onload = function() {
     updateUI();
   };
 
-  addButton1.onclick = function() {
+  addButtonListing.onclick = function() {
     var selectedOption = document.querySelector(".store-select option:checked");
     addToListingElements(selectedOption.innerText);
     updateUI();
   };
 
-  deleteButton.onclick = function() {
+  deleteButtonListing.onclick = function() {
     var selectedOption = document.querySelector(
       ".listing-select option:checked"
     );
     deleteListingElement(selectedOption.innerText);
     updateUI();
   };
-  addElementButton.onclick = function() {
+  addElementButtonListing.onclick = function() {
     addElementToListing();
     updateUI();
   };
