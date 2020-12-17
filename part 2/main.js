@@ -43,16 +43,16 @@ window.onload = function() {
 
   function renameListingElement(element){
     var elementPosition = listingElements.indexOf(element);
-    var result = prompt('Введите новое имя элемента');
     if (elementPosition > -1) {
+      var result = prompt('Введите новое имя элемента', listingElements[elementPosition]);
       listingElements[elementPosition] = result;
     }
   }
 
   function renameStoreElement(element){
     var elementPosition = storeElements.indexOf(element);
-    var result = prompt('Введите новое имя элемента');
     if (elementPosition > -1) {
+      var result = prompt('Введите новое имя элемента', storeElements[elementPosition]);
       storeElements[elementPosition] = result;
     }
   }
@@ -90,13 +90,17 @@ window.onload = function() {
     var selectedOption = document.querySelector(
       ".listing-select option:checked"
     );
-    addToStoreElements(selectedOption.innerText);
+    if (selectedOption !== null) {
+      addToStoreElements(selectedOption.innerText);
+    }
     updateUI();
   };
 
   addButtonListing.onclick = function() {
     var selectedOption = document.querySelector(".store-select option:checked");
-    addToListingElements(selectedOption.innerText);
+    if (selectedOption !== null) {
+      addToListingElements(selectedOption.innerText);
+    }
     updateUI();
   };
 
@@ -104,7 +108,9 @@ window.onload = function() {
     var selectedOption = document.querySelector(
       ".listing-select option:checked"
     );
-    deleteListingElement(selectedOption.innerText);
+    if (selectedOption !== null) {
+      deleteListingElement(selectedOption.innerText);
+    }
     updateUI();
   };
   addElementButtonListing.onclick = function() {
@@ -123,12 +129,16 @@ window.onload = function() {
     var selectedOption = document.querySelector(
       ".listing-select option:checked"
     );
-    renameListingElement(selectedOption.innerText);
+    if (selectedOption !== null) {
+      renameListingElement(selectedOption.innerText);
+    }
     updateUI();
   }
   renameStoreButton.onclick = function() {
     var selectedOption = document.querySelector(".store-select option:checked");
-    renameStoreElement(selectedOption.innerText);
+    if (selectedOption !== null) {
+      renameStoreElement(selectedOption.innerText);
+    }
     updateUI();
   }
 };
