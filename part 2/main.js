@@ -3,19 +3,11 @@ window.onload = function() {
   var storeElements = [];
 
   // логика JS, не связана с DOM
-  function addToStoreElements(element) {
-    var elementPosition = listingElements.indexOf(element);
+  function addToSetOfElements(deleteElement, addElement, element) {
+    var elementPosition = deleteElement.indexOf(element);
     if (elementPosition > -1) {
-      storeElements.push(element);
-      listingElements.splice(elementPosition, 1);
-    }
-  }
-
-  function addToListingElements(element) {
-    var elementPosition = storeElements.indexOf(element);
-    if (elementPosition > -1) {
-      listingElements.push(element);
-      storeElements.splice(elementPosition, 1);
+      addElement.push(element);
+      deleteElement.splice(elementPosition, 1);
     }
   }
 
@@ -33,27 +25,15 @@ window.onload = function() {
     }
   }
 
-  function sortListing(){
-    listingElements.sort();
+  function sortElements(setOfElements){
+    setOfElements.sort();
   }
 
-  function sortStore(){
-    storeElements.sort();
-  }
-
-  function renameListingElement(element){
-    var elementPosition = listingElements.indexOf(element);
+  function renameElements(setOfElements, element){
+    var elementPosition = setOfElements.indexOf(element);
     if (elementPosition > -1) {
-      var result = prompt('Введите новое имя элемента', listingElements[elementPosition]);
-      listingElements[elementPosition] = result;
-    }
-  }
-
-  function renameStoreElement(element){
-    var elementPosition = storeElements.indexOf(element);
-    if (elementPosition > -1) {
-      var result = prompt('Введите новое имя элемента', storeElements[elementPosition]);
-      storeElements[elementPosition] = result;
+      var result = prompt('Введите новое имя элемента', setOfElements[elementPosition]);
+      setOfElements[elementPosition] = result;
     }
   }
 
@@ -91,7 +71,7 @@ window.onload = function() {
       ".listing-select option:checked"
     );
     if (selectedOption !== null) {
-      addToStoreElements(selectedOption.innerText);
+      addToSetOfElements(listingElements, storeElements, selectedOption.innerText);
     }
     updateUI();
   };
@@ -99,7 +79,7 @@ window.onload = function() {
   addButtonListing.onclick = function() {
     var selectedOption = document.querySelector(".store-select option:checked");
     if (selectedOption !== null) {
-      addToListingElements(selectedOption.innerText);
+      addToSetOfElements(storeElements, listingElements, selectedOption.innerText);
     }
     updateUI();
   };
@@ -118,11 +98,11 @@ window.onload = function() {
     updateUI();
   };
   sortListingButton.onclick = function() {
-    sortListing();
+    sortElements(listingElements);
     updateUI();
   }
   sortStoreButton.onclick = function() {
-    sortStore();
+    sortElements(storeElements);
     updateUI();
   }
   renameListingButton.onclick = function() {
@@ -130,14 +110,14 @@ window.onload = function() {
       ".listing-select option:checked"
     );
     if (selectedOption !== null) {
-      renameListingElement(selectedOption.innerText);
+      renameElements(listingElements, selectedOption.innerText);
     }
     updateUI();
   }
   renameStoreButton.onclick = function() {
     var selectedOption = document.querySelector(".store-select option:checked");
     if (selectedOption !== null) {
-      renameStoreElement(selectedOption.innerText);
+      renameElements(storeElements, selectedOption.innerText);
     }
     updateUI();
   }
