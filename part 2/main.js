@@ -29,11 +29,10 @@ window.onload = function() {
     setOfElements.sort();
   }
 
-  function renameElements(setOfElements, element){
+  function renameElements(setOfElements, element, name){
     var elementPosition = setOfElements.indexOf(element);
     if (elementPosition > -1) {
-      var result = prompt('Введите новое имя элемента', setOfElements[elementPosition]);
-      setOfElements[elementPosition] = result;
+      setOfElements[elementPosition] = name;
     }
   }
 
@@ -110,14 +109,16 @@ window.onload = function() {
       ".listing-select option:checked"
     );
     if (selectedOption !== null) {
-      renameElements(listingElements, selectedOption.innerText);
+      var result = prompt('Введите новое имя элемента', selectedOption.innerText);
+      renameElements(listingElements, selectedOption.innerText, result);
     }
     updateUI();
   }
   renameStoreButton.onclick = function() {
     var selectedOption = document.querySelector(".store-select option:checked");
     if (selectedOption !== null) {
-      renameElements(storeElements, selectedOption.innerText);
+      var result = prompt('Введите новое имя элемента', selectedOption.innerText);
+      renameElements(storeElements, selectedOption.innerText, result);
     }
     updateUI();
   }
